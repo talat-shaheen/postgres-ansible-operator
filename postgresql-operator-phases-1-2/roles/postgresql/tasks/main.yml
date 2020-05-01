@@ -2,8 +2,8 @@
 - name: start postgres
   k8s:
     definition:
-      kind: DeploymentConfig
-      apiVersion: apis.openshift.io/v1
+      kind: Deployment
+      apiVersion: v1
       metadata:
         name: '{{ meta.name }}-postgres'
         namespace: '{{ meta.namespace }}'
